@@ -65,7 +65,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(filename, data) {
 
 
 }
@@ -76,11 +76,14 @@ function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(data);
 
-        const fileName = 
+        // const fileContent =  JSON.stringify(data)
+        // const contentMarkdown = generateMarkdown(fileContent)
 
-        fs.writeFile('README.MD',generateMarkdown(JSON.stringify(data)), (err) => {
+        fs.writeFile('README.MD',generateMarkdown(data), (err) => {
             err ? console.log(err) : console.log('File was written!');
         });
+        ///is this needed?
+
     });
 }
 
