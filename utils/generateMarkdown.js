@@ -4,8 +4,8 @@ function renderLicenseBadge(license) {
   if(license !== 'None'){
     return `## License
     This project is licensed with ${license}.`;
-
-  }
+/////switch statement???
+  } 
   return "";
 }
 
@@ -15,7 +15,7 @@ function renderLicenseLink(license) {
     if(license !== 'None'){
     return `## License Link
     This project is licensed with ${license}.`;
-
+///switch statement (see bookmark)
   }
   return "";
 }
@@ -35,20 +35,19 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Licence](#Licence)
-- [Contributors](#Contributors)
-- [Tests](#Tests)
-- [Repository Link](#Repository)
-- [GitHub Info](#GitHub) 
+- [Description](#description)
+- [Installation](#installation)
+- [Licence](#licence)
+- [Contributors](#contributors)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 ${data.installation}
 
 ## License
 ${data.license}
+![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
 
 ## Contributors
 ${data.contributor}
@@ -56,9 +55,9 @@ ${data.contributor}
 ## Tests
 ${data.test}
 
-## Repository Link
-${data.deployed}
-${data.github}
+## Questions
+For any questions feel free to reach out via [email](mailto:${data.email})
+or via my [Github](https://www.github.com/${data.github}/)
 `;
 }
 

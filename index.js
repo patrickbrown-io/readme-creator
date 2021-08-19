@@ -25,13 +25,6 @@ const questions = [
 
     {
         type: 'input',
-        message: 'What is your projects Github deployment link?',
-        name: 'deployed',
-    },
-
-
-    {
-        type: 'input',
         name: 'description',
         message: 'Give a brief description of your project:'
     },
