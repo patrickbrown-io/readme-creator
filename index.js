@@ -33,7 +33,7 @@ const questions = [
         type:'list',
         name:'license',
         message: 'What kind of license does your project use?',
-        choices: ["MIT","Fonzi","STP"],
+        choices: ["MIT", "Apache", "Unlicense","GPLv2","GPLv3","BSD 3-Clause"],
     },
 
     {
@@ -56,12 +56,6 @@ const questions = [
         message: 'How does a user contribute to this project?',
     }
 ];
-
-// TODO: Create a function to write README file
-function writeToFile(filename, data) {
-
-
-}
 
 // TODO: Create a function to initialize app
 function init() {
